@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+:root {
+  --white: #fff;
+  --black-grey: #151515;
+  --blue: #006fb0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 1em;
+  margin: 0;
+  background-color: var(--black-grey);
+  color: var(--white);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  padding: 10px 10px;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+.user-account {
+  font-size: 2em;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.colorBlue {
+  color: var(--blue);
+}
+
+ul {
+  list-style: none;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 340px;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.carusel {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 1em;
+}
+
+.poster {
+  height: 225px;
+}
+
+.modal {
+  background-color: var(--black-grey);
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.modal-content {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.model-controls button {
+  font-size: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+  margin-top: 2em;
 }
